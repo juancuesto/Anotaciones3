@@ -10,13 +10,14 @@ public class MiError extends Exception {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		MiError elerror=new MiError("El error es mio");
-		elerror=null;
+		//elerror=null;
 		
 		try {
 			f();
 			// elerror.MiMetodo();
 		} catch (MiError e) {
 			// TODO Auto-generated catch block
+			System.out.println(elerror);
 			e.printStackTrace();
 		}
 

@@ -25,6 +25,6 @@ public void Correr(int x) {
 class Gat extends Animal{
 	
 	public void Correr(double d) {
-		System.out.println("El gato corre:  " + d);
+		System.out.println("El gato corre:  "+ 15.0);
 	}
 }

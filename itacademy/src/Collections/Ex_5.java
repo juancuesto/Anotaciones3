@@ -20,9 +20,13 @@ public class Ex_5 {
 		lista2.add(9);
 		lista2.add(10);
 		Iterator<Integer> it=lista1.iterator();
-		for(int i=lista1.size(); i<0; i--) {
-			lista2.add(lista1.get(i));
+		//for (Integer integer : lista1) {
+		for (int i=lista1.size();i<0 ;i--) {
+			
+			lista2.add(it.next());
 		}
+			
+		
 		for(int j=0; j<lista2.size();j++) {
 		System.out.println(lista2);
 		}

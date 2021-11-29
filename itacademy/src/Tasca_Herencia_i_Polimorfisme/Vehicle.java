@@ -17,7 +17,7 @@ public class Vehicle {
 	}
 	public Vehicle(String M,String Mod) {
 		marca=M;
-		modelo=Mod;
+		modelo=Mod; //en el constructor se puede inicializar el atributo static pero no los final pq ya estan inicializados y no se pueden cambiar
 		
 	}
 	private String marca;
