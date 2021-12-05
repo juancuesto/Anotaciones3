@@ -4,7 +4,7 @@ public class Prova {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] ap= {2,1,9,5,3};
+		int[] ap= {2,1,4,5,3};
 		for(int i=0;i<ap.length;i++) {
 			System.out.println(ap[i]);
 		}
@@ -28,7 +28,7 @@ public class Prova {
 		}
 		
 		int pos,aux,j;
-		for(int i=1;i<ap.length;i++) {
+		for(int i=1;i<ap.length;i++) {//ordenamiento por insercion
 			aux=ap[i];
 			pos=i-1;
 			while((pos>=0)&&(aux<ap[pos])) {
@@ -42,7 +42,23 @@ public class Prova {
 			System.out.println(ap[i]);
 		}
 		
-		//FALTA PONER ALGORITMO INSERCION
+		for(int i=0;i<ap.length-1;i++){// ALGORITMO seleccion
+			int auxi;
+			int mayor=ap[i];
+			int posi=i;
+			for(int p=i+1;p<ap.length;p++) {
+				if(ap[i]<ap[p]) {
+					mayor=ap[p];
+					posi=p;
+				}
+			}
+			if(posi!=i) {
+			auxi=ap[i];
+			ap[i]=ap[posi];
+			ap[posi]=auxi;
+			}
+			
+		}
 		
 		System.out.println("valores seleccion");
 		for(int i=0;i<ap.length;i++) {

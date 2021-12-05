@@ -5,7 +5,16 @@ import java.util.Map.Entry;
 
 import S1_03_E4.Empleado;
 
-public class Ex_8 {
+public class Ex_8 implements Comparator {
+	
+	@Override
+	public int compare(Object a, Object b) {
+		// TODO Auto-generated method stub
+		String a1=(String)a;
+		String b1=(String)b;
+		//return a1.nombre.compareTo(b1.nombre);
+		return a1.compareTo(b1);
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -16,6 +25,11 @@ public class Ex_8 {
 		Empleado2 e2=new Empleado2("Luis");
 		Empleado2 e3=new Empleado2("Maria");
 		Empleado2 e4=new Empleado2("Pedro");
+		
+	
+		
+		int a =e1.hashCode();
+		System.out.println(a);
 		
 		personal.put("Primero", e1);
 		personal.put("Segundo", e2);
@@ -28,22 +42,28 @@ public class Ex_8 {
 			lista.add(entrada.getKey());	
 			
 		}
+		
 		System.out.println(lista);
-		System.out.println(personal);
 		
-		for(int i=0;i<lista.size()-1;i++) {
-		for(int j=1;j<lista.size();j++) {
-			if(lista.get(j-1).compareTo(lista.get(j))>0) {
-				String aux=lista.get(j-1);
-				lista.add((j-1),lista.get(j));
-				lista.add(j, aux);
-				
+		Ex_8 f=new Ex_8();
+		
+		String menor=lista.get(0);
+		String aux;
+		int pos=0;
+		for(int i=1;i<lista.size();i++) {
+			if(f.compare(menor,lista.get(i))<0) {
+				menor=lista.get(i);
+				pos=i;
+				for(int j=0;j<lista.size()-1;j++) {
+					aux=lista.get(pos);
+					lista.add(j, menor);
+					lista.add(pos, aux);
+					
+				}
 			}
+			
 		}
-		
-	}
-		
-
+		System.out.println(lista);
 	}
 
 }
