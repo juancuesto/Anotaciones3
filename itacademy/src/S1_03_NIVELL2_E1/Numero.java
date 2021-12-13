@@ -19,9 +19,9 @@ public class Numero {
 			pq.add(crearNum());
 		}
 		System.out.println(pq);
-		for(int j=0;j<pq.size()-1;j++) {// NO ENTIENDO PQ NO FUNCIONA EL METODO SIZE DE PRIORITYQUEUE
+		/*for(int j=0;j<pq.size()-1;j++) {// NO ENTIENDO PQ NO FUNCIONA EL METODO SIZE DE PRIORITYQUEUE
 			System.out.println(pq.poll());
-		}
+		}*/
 		System.out.println("Numero de elementos  "+pq.size());
 		for(int j=0;j<6;j++) {
 			System.out.println(pq.poll());

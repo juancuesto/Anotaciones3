@@ -7,23 +7,7 @@ import java.util.Map.Entry;
 
 import S1_03_E4.Empleado;
 
-public class MiClase {  //NO HE SABIDO ORENAR EL ARRAYLIST DE STRING
-	
-	/*public ArrayList<String> OrdenaArray(ArrayList<String>  clave) {  
-		String aux;
-		
-		for(int i=0;i<clave.size()-1;i++) { //ordenamiento por burbuja
-			for(int j=1;j<clave.size();j++) {
-				if(clave.get(j-1).compareTo(clave.get(j))>0) {
-					aux=clave.get(j);
-					clave.add(clave.get(j-1));
-					clave.add(j-1, aux);	
-				}	
-		}
-			
-		}
-		return clave;
-	}*/
+public class MiClase {  
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -50,12 +34,14 @@ public class MiClase {  //NO HE SABIDO ORENAR EL ARRAYLIST DE STRING
 			
 		}
 		String clave[]=new String[4];
-		for(int i=0;i<claves.size();i++) {
+		/*for(int i=0;i<claves.size();i++) {
 			clave[i]=claves.get(i);
-		}
+		}*/
+		claves.toArray(clave);//copiamos el ArrayList en el Array
 		for(int j=0;j<clave.length;j++) {
 		System.out.println(clave[j]+"  antes de ordenar");
 		}	
+		
 		Arrays.sort(clave);
 		for(int j=0;j<clave.length;j++) {
 			System.out.println(clave[j]+"  despues de ordenar");
