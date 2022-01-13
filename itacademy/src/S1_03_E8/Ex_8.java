@@ -43,27 +43,10 @@ public class Ex_8 implements Comparator {
 			
 		}
 		
-		System.out.println(lista);
+		System.out.println(lista+"lista no ordenada");
 		
-		Ex_8 f=new Ex_8();
-		
-		String menor=lista.get(0);
-		String aux;
-		int pos=0;
-		for(int i=1;i<lista.size();i++) {
-			if(f.compare(menor,lista.get(i))<0) {
-				menor=lista.get(i);
-				pos=i;
-				for(int j=0;j<lista.size()-1;j++) {
-					aux=lista.get(pos);
-					lista.add(j, menor);
-					lista.add(pos, aux);
-					
-				}
-			}
-			
-		}
-		System.out.println(lista);
+		Collections.sort(lista);
+		System.out.println(lista+"lista ordenada");
 	}
 
 }
