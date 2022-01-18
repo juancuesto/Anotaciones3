@@ -45,6 +45,7 @@ public class Ex_8 implements Comparator {
 		
 		System.out.println(lista+"lista no ordenada");
 		
+		
 		Collections.sort(lista);
 		System.out.println(lista+"lista ordenada");
 	}
