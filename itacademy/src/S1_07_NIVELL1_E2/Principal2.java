@@ -2,6 +2,8 @@ package S1_07_NIVELL1_E2;
 
 public class Principal2 {
 
+	@SuppressWarnings("deprecation")
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
